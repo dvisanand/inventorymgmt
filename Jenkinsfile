@@ -1,5 +1,11 @@
 pipeline {
   agent any
+  
+  tools {
+    maven 'Maven'
+    jdk   'Java'
+  }
+  
   stages {
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace... */
